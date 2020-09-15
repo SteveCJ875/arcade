@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    
+}
+.board{
+    display: flex;
+    min-height: 360px;
+    min-width: 360px;
+    flex-wrap: wrap;
+    border: solid rgb(172, 184, 7) 2px;
+    box-shadow: rgb(168, 168, 168) 10px 20px;
+    box-sizing: content-box;
+    
+}
+.cell{
+    flex-basis: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+/*middle vert*/
+.cell:nth-child(3n+2){
+    border-left:solid black 5px;
+    border-right: solid black 5px;
+    
+}
+/*middle horiz*/
+.cell:nth-child(n+4):nth-child(-n+6){
+    border-top: solid black 5px;
+    border-bottom: solid black 5px;
+}
+.cell:nth-of-type(even){
+    background-color: cornflowerblue;
+}
+.cell:nth-of-type(odd){
+    background-color: crimson;
+}
+.cell:nth-of-type(-n+3){
+    margin-top: 5px;
+}
+.cell:nth-of-type(n+7){
+    margin-bottom: 5px;
+}
+.cell:nth-of-type(3n+3){
+    /*margin-right: 5px;*/
+}
+.nameBoard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1em;
+    
+}
+input.button{
+    max-width: 150px;
+}
+
+input.text{
+    margin-bottom: 20px;
+}
+.Player1{
+    color: crimson;
+}
+.Player2{
+    color: cornflowerblue;
+}
